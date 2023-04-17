@@ -1,0 +1,1 @@
+# cider-remote-for-alfred
