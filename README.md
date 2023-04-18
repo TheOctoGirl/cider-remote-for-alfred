@@ -6,7 +6,7 @@ You are currently able to play, pause, skip and stop tracks.
 - **Keyword Customisation**
 You can customise the keywords that the workflow uses in the workflow configuration page in Alfred.
 ## Installation
-To install Cider Remote for Alfred go to the [Releases](https://github.com/TheOctoGirl/cider-remote-for-alfred/releases/tag/latest) page and download the .alfredworkflow file and click on the downloaded file to install it.
+To install Cider Remote for Alfred go to the [Releases](https://github.com/TheOctoGirl/cider-remote-for-alfred/releases/latest) page and download the .alfredworkflow file and click on the downloaded file to install it.
 ## Screenshots
 ![Next Track](https://user-images.githubusercontent.com/119755793/232650634-5fa819b0-171b-4f1d-b5ee-d2d88682676b.png)
 ![Previous Track](https://user-images.githubusercontent.com/119755793/232650671-3d9f5fb5-d6c8-4cee-92a5-13ea5222b307.png)
