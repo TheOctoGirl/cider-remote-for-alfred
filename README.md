@@ -2,8 +2,8 @@
 Cider Remote for Alfred is a simple Alfred Workflow that allows you to control the Cider Apple Music client in Alfred.
 ## Features
 - **Playback Controls**
-You are currently able to play, pause, skip and stop tracks.
-- **Keyword Customisation**
+You are currently able to play, pause, rewind, skip and stop tracks.
+- **Keyword Customization**
 You can customise the keywords that the workflow uses in the workflow configuration page in Alfred.
 ## Installation
 To install Cider Remote for Alfred go to the [Releases](https://github.com/TheOctoGirl/cider-remote-for-alfred/releases/latest) page and download the .alfredworkflow file and click on the downloaded file to install it.
