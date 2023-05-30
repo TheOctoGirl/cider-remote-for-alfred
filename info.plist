@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.theoctogirl.cider-remote-for-alfred</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>36992FE1-B276-43C9-915D-E57F46C9CC61</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC07A46B-14E1-4C36-90BE-0DB6EF9CA35C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3A69B593-7D3F-4D00-A216-5D2ABD441678</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC07A46B-14E1-4C36-90BE-0DB6EF9CA35C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>63A1FC3D-3131-4772-A887-B3ED0297CB5C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F5BA4F2A-24C3-4507-BE0C-363D74FCA196</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6C1ED6C8-2157-478E-B7BB-C2BE95184F7B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ACB0C303-16B7-4AF7-8A57-CC9C28F3E664</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9BEE2243-006B-4BC2-B44E-5FBA9C1C4E8E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0D8A7220-FD68-4568-8E0E-8894E423BB99</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D48A58D8-DB07-4A87-860B-D96CE316ED64</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DC07A46B-14E1-4C36-90BE-0DB6EF9CA35C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>TheOctoGirl</string>
+	<key>description</key>
+	<string>A simple remote for Cider in Alfred</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Cider Remote</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:next}</string>
+				<key>subtext</key>
+				<string>Play the next track in Cider.app</string>
+				<key>text</key>
+				<string>Next Track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>9BEE2243-006B-4BC2-B44E-5FBA9C1C4E8E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>name="Cider"
+
+if ! pgrep -x "$name" &gt; /dev/null
+then 
+	open -a "$name"
+else
+	curl http://localhost:9000/api/playback/next
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0D8A7220-FD68-4568-8E0E-8894E423BB99</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:pause}</string>
+				<key>subtext</key>
+				<string>Play or Pause the current track in Cider.app</string>
+				<key>text</key>
+				<string>Play / Pause</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>3A69B593-7D3F-4D00-A216-5D2ABD441678</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>name="Cider"
+
+if ! pgrep -x "$name" &gt; /dev/null
+then 
+	open -a "$name"
+else
+	curl http://localhost:9000/api/playback/playpause
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DC07A46B-14E1-4C36-90BE-0DB6EF9CA35C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:play}</string>
+				<key>subtext</key>
+				<string>Play or Pause the current track in Cider.app</string>
+				<key>text</key>
+				<string>Play / Pause</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>36992FE1-B276-43C9-915D-E57F46C9CC61</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:play2}</string>
+				<key>subtext</key>
+				<string>Play or Pause the current track in Cider.app</string>
+				<key>text</key>
+				<string>Play / Pause</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D48A58D8-DB07-4A87-860B-D96CE316ED64</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:previous}</string>
+				<key>subtext</key>
+				<string>Play the previous track in Cider.app</string>
+				<key>text</key>
+				<string>Previous Track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>63A1FC3D-3131-4772-A887-B3ED0297CB5C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>name="Cider"
+
+if ! pgrep -x "$name" &gt; /dev/null
+then 
+	open -a "$name"
+else
+	curl http://localhost:9000/api/playback/previous
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F5BA4F2A-24C3-4507-BE0C-363D74FCA196</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:stop}</string>
+				<key>subtext</key>
+				<string>Stop the current track in Cider.app</string>
+				<key>text</key>
+				<string>Stop</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6C1ED6C8-2157-478E-B7BB-C2BE95184F7B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>name="Cider"
+
+if ! pgrep -x "$name" &gt; /dev/null
+then 
+	open -a "$name"
+else
+	curl http://localhost:9000/api/playback/stop
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>ACB0C303-16B7-4AF7-8A57-CC9C28F3E664</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Cider Remote for Alfred
+Cider Remote for Alfred is a simple Alfred Workflow that allows you to control the Cider Apple Music client in Alfred.
+## Features
+- **Playback Controls**
+You are currently able to play, pause, skip and stop tracks.
+- **Keyword Customisation**
+You can customise the keywords that the workflow uses in the workflow configuration page in Alfred.
+## Screenshots
+![Next Track](images/next.png)
+![Previous Track](images/previous.png)
+![Stop](images/stop.png)
+![Play/Pause](images/play.png)
+## Bugs &amp; Feature Requests
+If you have a encountered a bug or would like to request a feature please open an [Issue](https://github.com/TheOctoGirl/cider-remote-for-alfred/issues)</string>
+	<key>uidata</key>
+	<dict>
+		<key>0D8A7220-FD68-4568-8E0E-8894E423BB99</key>
+		<dict>
+			<key>xpos</key>
+			<real>375</real>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+		<key>36992FE1-B276-43C9-915D-E57F46C9CC61</key>
+		<dict>
+			<key>xpos</key>
+			<real>110</real>
+			<key>ypos</key>
+			<real>360</real>
+		</dict>
+		<key>3A69B593-7D3F-4D00-A216-5D2ABD441678</key>
+		<dict>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>63A1FC3D-3131-4772-A887-B3ED0297CB5C</key>
+		<dict>
+			<key>xpos</key>
+			<real>120</real>
+			<key>ypos</key>
+			<real>615</real>
+		</dict>
+		<key>6C1ED6C8-2157-478E-B7BB-C2BE95184F7B</key>
+		<dict>
+			<key>xpos</key>
+			<real>120</real>
+			<key>ypos</key>
+			<real>750</real>
+		</dict>
+		<key>9BEE2243-006B-4BC2-B44E-5FBA9C1C4E8E</key>
+		<dict>
+			<key>xpos</key>
+			<real>120</real>
+			<key>ypos</key>
+			<real>100</real>
+		</dict>
+		<key>ACB0C303-16B7-4AF7-8A57-CC9C28F3E664</key>
+		<dict>
+			<key>xpos</key>
+			<real>360</real>
+			<key>ypos</key>
+			<real>750</real>
+		</dict>
+		<key>D48A58D8-DB07-4A87-860B-D96CE316ED64</key>
+		<dict>
+			<key>xpos</key>
+			<real>115</real>
+			<key>ypos</key>
+			<real>470</real>
+		</dict>
+		<key>DC07A46B-14E1-4C36-90BE-0DB6EF9CA35C</key>
+		<dict>
+			<key>xpos</key>
+			<real>370</real>
+			<key>ypos</key>
+			<real>360</real>
+		</dict>
+		<key>F5BA4F2A-24C3-4507-BE0C-363D74FCA196</key>
+		<dict>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>615</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>next</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The keyword that you would like to use when skipping to the next track in Cider.app.</string>
+			<key>label</key>
+			<string>Next Track Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>next</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>previous</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The keyword that you would like to use when going back to the previous track in Cider.app.</string>
+			<key>label</key>
+			<string>Previous Track Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>previous</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>stop</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The keyword you would like to use when stopping  Cider.app from playing.</string>
+			<key>label</key>
+			<string>Stop Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>stop</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>play</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The first keyword you would like to use to play or pause Cider.app.</string>
+			<key>label</key>
+			<string>Play Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>play</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>pause</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The second keyword you would like to use to play or pause Cider.app.</string>
+			<key>label</key>
+			<string>Pause Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>pause</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>p</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The short keyword you would like to use when playing or pausiong Cider.app.</string>
+			<key>label</key>
+			<string>Short Play/Pause Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>play2</string>
+		</dict>
+	</array>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/TheOctoGirl/cider-remote-for-alfred</string>
+</dict>
+</plist>
