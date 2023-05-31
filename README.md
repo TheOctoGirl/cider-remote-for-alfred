@@ -5,8 +5,23 @@ Cider Remote for Alfred is a simple Alfred Workflow that allows you to control t
 You are currently able to play, pause, rewind, skip and stop tracks.
 - **Keyword Customization**
 You can customize the keywords that the workflow uses in the workflow configuration page in Alfred.
+
+## Pre-requisites
+- [Alfred](https://www.alfredapp.com/)
+- [Alfred Powerpack](https://www.alfredapp.com/powerpack/)
+- [Cider](https://cider.sh/)
+
 ## Installation
-To install Cider Remote for Alfred go to the [Releases](https://github.com/TheOctoGirl/cider-remote-for-alfred/releases/latest) page and download the .alfredworkflow file and click on the downloaded file to install it.
+To install Cider Remote for Alfred go to the [Releases](https://github.com/TheOctoGirl/cider-remote-for-alfred/releases/latest) page and download the `.alfredworkflow` file and click on the downloaded file to install it.
+
+## Usage
+To use Cider Remote for Alfred you must first open Cider and start playing a song. Then you can use the following keywords to control playback:
+- `next` - Skips to the next track
+- `previous` - Skips to the previous track
+- `stop` - Stops playback
+- `play` - Plays the current track
+- `pause` - Pauses the current track
+
 ## Screenshots
 ![Next Track](https://user-images.githubusercontent.com/119755793/232650634-5fa819b0-171b-4f1d-b5ee-d2d88682676b.png)
 ![Previous Track](https://user-images.githubusercontent.com/119755793/232650671-3d9f5fb5-d6c8-4cee-92a5-13ea5222b307.png)
