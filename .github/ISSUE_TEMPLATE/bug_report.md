@@ -1,28 +1,35 @@
-## Bug Report
+---
+name: Bug report
+about: File a bug report
+title: ''
+labels: bug
+assignees: ''
 
-### Description
+---
+
+**Description**
 [Describe the bug in detail here]
 
-### Steps to Reproduce
+**Steps to Reproduce**
 1. [Step 1]
 2. [Step 2]
 3. [Step 3]
 4. [Step 4]
 
-### Expected Behavior
+**Expected Behavior**
 [Describe what you expected to happen]
 
-### Actual Behavior
+**Actual Behavior**
 [Describe what actually happened]
 
-### Screenshots
+**Screenshots**
 [If applicable, include screenshots to help explain the problem]
 
-### Workflow Version
+**Workflow Version**
 [Include the version number of the workflow]
 
-### Alfred Version
+**Alfred Version**
 [Include the version number of Alfred]
 
-### Additional Information
+**Additional Information**
 [Include any additional information that may be helpful in diagnosing the problem]
