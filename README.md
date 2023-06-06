@@ -9,7 +9,7 @@ You can customize the keywords that the workflow uses in the workflow configurat
 ## Pre-requisites
 - [Alfred](https://www.alfredapp.com/)
 - [Alfred Powerpack](https://www.alfredapp.com/powerpack/)
-- [Cider](https://cider.sh/)
+- [Cider Classic](https://cider.sh/downloads)
 
 ## Installation
 To install Cider Remote for Alfred go to the [Releases](https://github.com/TheOctoGirl/cider-remote-for-alfred/releases/latest) page and download the `.alfredworkflow` file and click on the downloaded file to install it.
